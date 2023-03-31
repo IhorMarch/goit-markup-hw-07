@@ -15,6 +15,7 @@ body{
     color: var(--main-colour-text);
     background-color: var(--main-background);
     font-family: 'Roboto', sans-serif;
+    color: var(--main-colour-text);
         /* overflow: hidden; */
 }
 .link {text-decoration: none;}
@@ -22,6 +23,19 @@ body{
 .list {list-style-type: none;
 padding: 0;
 margin: 0;}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
 /* .container{
 margin-left: auto;
@@ -61,10 +75,35 @@ padding-right: 15px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.section{
+@media screen and (min-width:480px)  {
+
+
+        .section {
+                padding-top: 96px;
+                padding-bottom: 96px;
+            }
+}
+
+@media screen and (min-width:768px) {
+    .section {
+        width: 768px;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+.section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+}
+
+/* section{
     padding-top: 120px;
     padding-bottom: 120px;
-}
+} */
+
 h1,
 h2,
 h3,
@@ -82,47 +121,133 @@ img {
             align-items: baseline;
         }
 
-        .logo {
-    color: var(--primary-Brand);
-    font-family: 'Raleway';
-        
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1.33;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        display: block;
-        padding-top: 24px;
-            padding-bottom: 24px;}
+/* ================ MOBILE ================================ */
 
-/* HEADER */
-@media screen and (max-width:767px){.top-nav{
+@media screen and (max-width:767px) {
+    
+    /* HEADER  MOBILE*/
+    .top-nav{
     display: none;
 }
 .address{
     display: none;
 }
-}
 
-.main-nav{
+.main-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 25.5px;
-        padding-bottom: 23.5px;
+    padding-top: 24px;
+    padding-bottom: 22px;
 }
+
 .logo-nav {
     color: var(--Dark);
 }
+
+.logo {
+    color: var(--primary-Brand);
+    font-family: 'Raleway';
+
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: block;
+}
+.mobile-menu-open {
+    background: transparent;
+    padding: 0;
+    border: none;
+    line-height: 0;
+}
+
+}
+/* ===================HERO MOBILE============== */
+
+@media screen and (max-width:767px){
+    .hero {
+    background-color: var(--Dark);
+    max-width: 428px;
+    height: 432px;
+    text-align: center;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../img/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;}
+
+    .hero-title{
+       
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;            
+        color: var(--main-background);
+            margin-bottom: 72px;
+                width: 320px;
+                height: 80px;
+                margin-left: auto;
+                margin-right: auto;
+    }
+        .hero-button {
+            color: var(--main-background);
+            background-color: var(--primary-Brand);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            background: var(--primary-Brand);
+            padding: 16px 32px;
+            border-color: transparent;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color var(--transition);
+        }
+        
+        .hero-button:hover,
+        .hero-button:focus {
+            background-color: var(--hover)
+        }
+    }
+/* *===================HERO MOBILE============== */
+ @media screen and (max-width:767px){
+    .features-list-wrap {
+        display: none;
+    }
+            .features-title {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 1.11;
+                text-align: center;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+ }
+.features-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+   }
+
+.features .item:not(:last-child) {
+    margin-bottom: 72px;
+}
+.features-title {
+
+    margin-bottom: 8px;
+}
+
 /* ==================MOBILE-MENU========================= */
-.mobile-menu-open
-{background: transparent;
-padding: 0;
-border: none;
-line-height: 0;}
-
-
-         .mobile-menu.is-open {
+        .mobile-menu.is-open {
     
              opacity: 1;
              visibility: visible;
@@ -136,13 +261,18 @@ line-height: 0;}
     top: 0;
     left: 0;
     background-color:#FFFFFF ;
-        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-opacity: 0;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
-.mobile-menu-container{position: relative;
-padding: 40px 35px 40px 40px;
+.mobile-menu-container{
+    position: relative;
+padding: 80px 35px 40px 40px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
 }
 
 
@@ -156,24 +286,49 @@ padding: 40px 35px 40px 40px;
             display: block;
             transition: color var(--transition);
         }
-                .mob-item {
-                    margin-top: 40px;
+                .mob-item:not(:last-child) {
+                    margin-bottom: 40px;
                 }
-        .mob-list{
-            margin-bottom: 284px;
-        }
-        .mob-address-item:not(:last-child){
+       
+        .mob-address-item:last-child{
             margin-bottom: 40px;
         }
         .mob-address{
             margin-bottom: 48px;
         }
        
-                .social-list.mob-social-list{
-                    justify-content: space-between;
+        .social-list.mob-social-list{
+       gap: 32px;
+       justify-content: flex-start;
                 }
                
+.mob-address-item .link{
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 1.2;
+         letter-spacing: 0.02em;
+          color: #434455;
+    }
+.mob-address-list{ display: flex;
+flex-direction: column;
+}
+.mob-address-item:first-child{
+    order: 2;
+}
+.link.current{
     
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11; 
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--hover);
+}
+
+/* ======================================================== */
+
+
+                          
  /* .header{
     border-bottom: 1px solid var(--accent);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -289,7 +444,7 @@ color: var(--hover);
 }  */
 
 /* HERO */
-.hero{
+/* .hero{
     background-color: var(--Dark);
     max-width: 1440px;height: 600px;
     text-align: center;
@@ -319,8 +474,6 @@ color: var(--hover);
          }
 .hero-button{color: var(--main-background);
 background-color: var(--primary-Brand);
-
-    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -338,18 +491,7 @@ background-color: var(--primary-Brand);
 }
 
 /* Features */
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
+/* 
 .features{
     display: flex;
 }
@@ -382,7 +524,7 @@ background-color: var(--primary-Brand);
     background: var(--Light); 
         border-radius: 4px;
         padding: 24px 100px;margin-bottom: 8px;
-}
+} */
 
 /* ABOUT */
 .about {
