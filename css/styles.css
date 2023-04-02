@@ -41,13 +41,13 @@ margin: 0;}
 margin-left: auto;
 margin-right: auto;
 max-width: 1158px;
-padding-left: 15px;
-padding-right: 15px;
-} */
+padding-left: 16px;
+padding-right: 16px;
+} *
 
 /* +++++++++++++++++++++++++++++ */
 .container {
-    width: 100%;
+    
     padding-left: 16px;
     padding-right: 16px;
  
@@ -56,9 +56,11 @@ padding-right: 15px;
 @media screen and (min-width:480px) {
 
     .container{
-        margin-left: auto;
+      margin-left: auto;
        margin-right: auto;
         width: 428px;
+      
+
     }
    }
 @media screen and (min-width:768px) {
@@ -75,7 +77,7 @@ padding-right: 15px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@media screen and (min-width:480px)  {
+@media screen and (min-width:320px)  {
 
 
         .section {
@@ -86,7 +88,7 @@ padding-right: 15px;
 
 @media screen and (min-width:768px) {
     .section {
-        width: 768px;
+        /* width: 768px; */
     }
 
 }
@@ -120,6 +122,19 @@ img {
             display: flex;
             align-items: baseline;
         }
+           
+.section-title {
+    color: var(--Dark);
+    font-family: 'Roboto';
+        
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-transform: capitalize;
+         margin-bottom: 72px;
+      }
 
 /* ================ MOBILE ================================ */
 
@@ -218,7 +233,7 @@ img {
             background-color: var(--hover)
         }
     }
-/* *===================HERO MOBILE============== */
+/* *===================FEATURES MOBILE============== */
  @media screen and (max-width:767px){
     .features-list-wrap {
         display: none;
@@ -245,6 +260,71 @@ img {
 
     margin-bottom: 8px;
 }
+ }
+
+/* *===================ABOUT MOBILE============== */
+@media screen and (max-width:1199px){
+.about{
+    display: none;
+}
+
+}
+
+/* *===================TEAM MOBILE============== */
+
+@media screen and (max-width:767px){
+
+.section.team {
+        background-color: var(--Light);
+    }
+        .team-description {
+    
+            padding: 16px 32px;
+            
+            background: var(--main-background);
+            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+            border-radius: 0px 0px 4px 4px;
+            height: 168px;
+            margin: 0;
+        }
+        .team-text {
+         font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-align: center;
+        margin-bottom: 8px;
+                             }
+    .team-list .title{
+    text-align: center;
+    margin-bottom: 8px;
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-list-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-Brand);
+    transition: background var(--transition);
+}
+
+.social-list-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.social-list-link:is(:hover, :focus) {
+    background: var(--hover);
+}
+
+}
 
 /* ==================MOBILE-MENU========================= */
         .mobile-menu.is-open {
@@ -258,6 +338,7 @@ img {
     z-index: 1000;
     width: 100%;
     height: 100%;
+    max-height: 796px;
     top: 0;
     left: 0;
     background-color:#FFFFFF ;
@@ -265,6 +346,7 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity var(--transition), visibikity var(--transition);
 }
 .mobile-menu-container{
     position: relative;
@@ -420,12 +502,12 @@ color: var(--hover);
                
 
 } 
-.address{
+.address-list{
     display: flex;
     margin-left: 332px;
-        font-style: normal;
+       
 }
-.address .link{color: var(--main-colour-text);
+.address-list .link{color: var(--main-colour-text);
 font-size: 16px;
     line-height: 1.5;
 letter-spacing: 0.02em;
@@ -435,11 +517,11 @@ padding-bottom: 24px;
 transition: color var(--transition);}
 
     
-.address .link:hover, address .link:focus{
+.address-list .link:hover, address .link:focus{
 color: var(--hover);
  
 }
-.address .item:not(:last-child){
+.address-list .item:not(:last-child){
     margin-right: 40px;
 }  */
 
@@ -527,7 +609,7 @@ background-color: var(--primary-Brand);
 } */
 
 /* ABOUT */
-.about {
+/* .about {
     padding-top: 0px;}
     .list-about{
         display: flex;
@@ -535,21 +617,19 @@ background-color: var(--primary-Brand);
     .list-about .item:not(:last-child){
         margin-right: 24px;
     }
-.section-title {
-    color: var(--Dark);
-    font-family: 'Roboto';
-        
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-align: center;
-        text-transform: capitalize;
-         margin-bottom: 72px;
-      }
+  */
 
-/* TEAM */
+/* TEAM -DESKTOP*/
+
+
+    /* .team-list{
+    display: flex;
+  
+} 
+
+
 .section.team{background-color: var(--Light);}
+
 .team-description{
     
     padding-top: 32px;
@@ -560,9 +640,8 @@ background-color: var(--primary-Brand);
         height: 168px;
         margin: 0;
 }
-.team-list{
-    display: flex;
-}
+
+
 .team-list .item{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         border-radius: 0px 0px 4px 4px;
@@ -585,7 +664,8 @@ background-color: var(--primary-Brand);
 
 .team-list .item:not(:last-child){
     margin-right: 24px;
-}
+ }
+
 .social-list{
     display: flex;
 justify-content: center;
@@ -606,9 +686,11 @@ justify-content: center;
 
 .social-list-link:is(:hover, :focus) {
     background: var(--hover);
-}
-/* CLIENTS */
+}  */
 
+ 
+/* CLIENTS */
+/* 
 .client-list{
     display: flex;
     justify-content: center;
@@ -646,10 +728,10 @@ justify-content: center;
 .client-link:focus .client-icon
 {
 fill: var(--hover);
-}
+} */
 
 /* FOOTER */
-
+/* 
 .footer{
     display: flex;
     background-color: var(--Dark);
@@ -744,7 +826,7 @@ gap: 16px;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-}
+} */
         /* < !--=========BACKDROP=============--> */
 .backdrop{
     position: fixed;
