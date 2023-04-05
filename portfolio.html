@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -28,6 +28,7 @@
         <a href="/" class="logo link"
           >WEB<span class="logo-nav">STUDIO</span></a
         >
+
         <nav class="top-nav">
           <ul class="site-nav list">
             <li class="item">
@@ -39,8 +40,8 @@
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
         </nav>
-        <address>
-          <ul class="address list">
+        <address class="address">
+          <ul class="address-list list">
             <li class="item">
               <a href="mailto:info@devstudio.com" class="link"
                 >info@devstudio.com</a
@@ -51,6 +52,90 @@
             </li>
           </ul>
         </address>
+
+        <button
+          type="button"
+          class="mobile-menu-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mob-list"
+        >
+          <svg class="mob-menu-icon" width="32px" height="22px">
+            <use href="./img/icons.svg#charm_menu-hamburger-converted"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- -----------MOBILE MENU----------------------------- -->
+
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+          <button type="button" class="modal-close-btn js-close-menu">
+            <svg class="close-modal-icon" width="8px" height="8px">
+              <use href="./img/icons.svg#close-modal-btn"></use>
+            </svg>
+          </button>
+          <div class="mob-wraper-top">
+            <ul class="mob-list list">
+              <li class="mob-item">
+                <a href="./index.html" class="mob-link link">Studio</a>
+              </li>
+              <li class="mob-item">
+                <a href="./portfolio.html" class="mob-link link current"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mob-item">
+                <a href="./index.html" class="mob-link link">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-wrap-bottom">
+            <address class="mob-address">
+              <ul class="mob-address-list list">
+                <li class="mob-address-item">
+                  <a href="mailto:info@devstudio.com" class="link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="mob-address-item">
+                  <a href="tel:+110001111111" class="link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="social-list mob-social-list list">
+              <li class="social-list-item mob-social-item">
+                <a href="#" class="social-list-link">
+                  <svg class="social-list-icons" width="24px" height="24px">
+                    <use href="./img/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item mob-social-item">
+                <a href="#" class="social-list-link">
+                  <svg class="social-list-icons" width="24px" height="24px">
+                    <use href="./img/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item mob-social-item">
+                <a href="#" class="social-list-link">
+                  <svg class="social-list-icons" width="24px" height="24px">
+                    <use href="./img/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item mob-social-item">
+                <a href="#" class="social-list-link">
+                  <svg class="social-list-icons" width="24px" height="24px">
+                    <use href="./img/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -80,13 +165,17 @@
 
       <!-- /* EXAMPLES */ -->
       <section class="section examples">
-        <div class="container">
+        <div class="container examples-container">
           <h1 class="visually-hidden">Examples of our works</h1>
           <ul class="examples-list list">
             <li class="item">
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port1.jpg   1x,
+                      ./img/Porfolio/port1@2.jpg 2x
+                    "
                     src="./img/Porfolio/port1.jpg"
                     alt="Banking App"
                     width="360"
@@ -109,6 +198,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port2.jpg   1x,
+                      ./img/Porfolio/port2@2.jpg 2x
+                    "
                     src="./img/Porfolio/port2.jpg"
                     alt="Cashless"
                     width="360"
@@ -131,6 +224,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port3.jpg   1x,
+                      ./img/Porfolio/port3@2.jpg 2x
+                    "
                     src="./img/Porfolio/port3.jpg"
                     alt="Meditaion"
                     width="360"
@@ -153,6 +250,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port4.jpg   1x,
+                      ./img/Porfolio/port4@2.jpg 2x
+                    "
                     src="./img/Porfolio/port4.jpg"
                     alt="Taxi"
                     width="360"
@@ -175,6 +276,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port5.jpg   1x,
+                      ./img/Porfolio/port5@2.jpg 2x
+                    "
                     src="./img/Porfolio/port5.jpg"
                     alt="Screen"
                     width="360"
@@ -197,6 +302,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port6.jpg   1x,
+                      ./img/Porfolio/port6@2.jpg 2x
+                    "
                     src="./img/Porfolio/port6.jpg"
                     alt="woman"
                     width="360"
@@ -219,6 +328,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port7.jpg   1x,
+                      ./img/Porfolio/port7@2.jpg 2x
+                    "
                     src="./img/Porfolio/port7.jpg"
                     alt="Instagram Stories"
                     width="360"
@@ -241,6 +354,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port8.jpg   1x,
+                      ./img/Porfolio/port8@2.jpg 2x
+                    "
                     src="./img/Porfolio/port8.jpg"
                     alt="Organic Food"
                     width="360"
@@ -263,6 +380,10 @@
               <a href="" class="examples-link link">
                 <div class="examples-list-img-wrapper">
                   <img
+                    srcset="
+                      ./img/Porfolio/port9.jpg   1x,
+                      ./img/Porfolio/port9@2.jpg 2x
+                    "
                     src="./img/Porfolio/port9.jpg"
                     alt="Coffee"
                     width="360"
@@ -288,7 +409,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container container-flex">
+      <div class="container footer-container">
         <div class="footer-left">
           <a href="/" class="logo link footer-logo"
             >WEB<span class="logo-footer">STUDIO</span></a
@@ -353,5 +474,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
